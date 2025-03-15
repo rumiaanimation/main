@@ -3,58 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Cool Website</title>
-  <!-- Google Fonts を利用しておしゃれなフォントを適用 -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <title>My Cute Website</title>
+  <!-- 可愛らしさを出すために、Quicksandフォントを利用 -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* 全体の基本スタイル */
+    /* ページ全体の背景を紺色に設定 */
     body {
       margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background-color: #f9f9f9;
+      font-family: 'Quicksand', sans-serif;
+      background-color: #001f3f; /* 紺色 */
       color: #333;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
     }
-    /* コンテナ設定 */
+    /* コンテナ（中央に配置するカード） */
     .container {
       max-width: 800px;
       width: 90%;
-      padding: 20px;
+      padding: 30px;
       text-align: center;
       background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     }
     header {
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
     h1 {
       font-size: 2.5em;
       margin: 0;
-      color: #007BFF;
+      color: #ff4081; /* ポップなピンク */
     }
-    /* リンクボタンのスタイル */
+    /* リンクボタンの設定 */
     .links {
       display: flex;
       flex-direction: column;
       gap: 20px;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
     .link-button {
       display: block;
       text-decoration: none;
       color: #fff;
-      background-color: #007BFF;
+      background-color: #ff4081;
       padding: 15px;
-      border-radius: 5px;
+      border-radius: 50px; /* 丸みを持たせて可愛く */
       transition: background-color 0.3s ease;
       font-size: 1.2em;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     }
     .link-button:hover {
-      background-color: #0056b3;
+      background-color: #e73370;
     }
     footer {
       font-size: 0.9em;
@@ -65,7 +66,7 @@
 <body>
   <div class="container">
     <header>
-      <h1>My Cool Website</h1>
+      <h1>My Cute Website</h1>
     </header>
     <div class="links">
       <a href="https://www.youtube.com/channel/yourchannel" target="_blank" class="link-button">YouTube</a>
