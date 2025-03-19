@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>RumiaAnimation</title>
 
-  <!-- Google Fonts: Poppins (例として使用) -->
+  <!-- Google Fonts: Poppins -->
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
     rel="stylesheet"
   />
 
-  <!-- 自分用のFont Awesomeキット（アイコン使用のため） -->
+  <!-- 自分用のFont Awesomeキット -->
   <script src="https://kit.fontawesome.com/282c30e639.js" crossorigin="anonymous"></script>
 
   <style>
@@ -22,25 +22,33 @@
       box-sizing: border-box;
     }
 
-    /* bodyは省略。背景等は既存のままでOK。 */
+    /* ★ 背景画像を設定 (repeat でタイル状に並べる) */
     body {
       font-family: 'Poppins', sans-serif;
+      background:
+        /* 白背景 + 独自画像 */
+        #fff
+        url("https://rumiaanimation.github.io/main/HPhaikei.png")
+        repeat
+        center center;
+      background-size: 200px 200px; 
       color: #2B2E47;
-      background: #fff; /* 必要に応じてパターン画像やグラデーションを設定 */
+      overflow-x: hidden;
     }
 
-    /* コンテナ・タイトルなども既存のままでOK */
     .container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 60px 20px;
       text-align: center;
     }
+
     .main-title {
       font-size: 3rem;
       font-weight: 700;
       margin-bottom: 20px;
     }
+
     .sub-title {
       font-size: 1.1rem;
       max-width: 700px;
@@ -49,7 +57,6 @@
       line-height: 1.6;
     }
 
-    /* リンクボタンをまとめるラッパ */
     .links-container {
       display: flex;
       flex-direction: column;
@@ -59,42 +66,33 @@
       margin-bottom: 60px;
     }
 
-    /* ================================
-       ★ ボタン（Font Awesome公式風）★
-       ================================ */
+    /* ========= Font Awesome公式風のボタンデザイン ========= */
     .link-button {
-      /* 表示方法 */
       display: inline-flex;
       align-items: center;
       justify-content: center;
-
-      /* 文字設定・余白など */
       font-weight: 600;
       font-size: 1.2em;
       text-decoration: none;
       padding: 14px 24px;
-      border-radius: 8px;        /* 角をやや丸く */
-      border: 2px solid #2B2E47; /* 公式風のアウトライン (ここは濃ネイビー系) */
-      color: #2B2E47;           /* 文字色も同じネイビー系 */
-
-      /* 背景色は白 */
+      border-radius: 8px;        
+      border: 2px solid #2B2E47; 
+      color: #2B2E47;           
       background-color: #fff;
-
-      /* transitionでホバー時の変化を滑らかに */
       transition: background-color 0.3s ease, color 0.3s ease;
     }
-    /* アイコンの右マージン */
+
     .link-button i {
       margin-right: 8px;
       font-size: 1.2em;
     }
-    /* ホバー時: 背景色と文字色を変える */
+
+    /* ホバー時に塗りつぶし＆白文字に変化 */
     .link-button:hover {
-      background-color: #2B2E47; /* アウトライン色と同じ色を背景に */
-      color: #fff;              /* 白文字に反転 */
+      background-color: #2B2E47;
+      color: #fff;
     }
 
-    /* フッターは既存 */
     footer {
       text-align: center;
       padding: 20px;
@@ -104,7 +102,6 @@
       margin-top: 40px;
     }
 
-    /* レスポンシブ対応（必要に応じて） */
     @media (max-width: 600px) {
       .main-title {
         font-size: 2rem;
@@ -125,14 +122,11 @@
 <body>
 
   <div class="container">
-
-    <!-- タイトル(例) -->
     <h1 class="main-title">RumiaAnimation</h1>
     <p class="sub-title">
       ここではオリジナルアニメーションやクリエイティブ作品を発信中！
     </p>
 
-    <!-- リンクボタン一覧 -->
     <div class="links-container">
       <a
         href="https://www.youtube.com/channel/UCK_cKJh2CTMVEh9_dgpy1cg"
