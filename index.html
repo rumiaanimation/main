@@ -28,11 +28,11 @@
       background: 
         /* 白背景 */
         #fff
-        /* 仮のパターン画像: 実際には好きなアイコン柄画像を用意して差し替えてください */
+        /* 下記はダミーのパターン画像です。お好みで差し替えてください。 */
         url('https://via.placeholder.com/600x600/FFFFFF/CCCCCC?text=icons+pattern') 
         repeat center center;
-      background-size: 200px 200px;
-      color: #2B2E47; /* メインテキストは濃ネイビー */
+      background-size: 200px 200px; /* パターンの大きさ調整 */
+      color: #2B2E47; /* 濃ネイビー系 */
       overflow-x: hidden;
     }
 
@@ -51,18 +51,18 @@
       margin-bottom: 20px;
       line-height: 1.2;
     }
-    /* タイトル内で一部を強調（イエロー）したい場合 */
+    /* タイトル内の強調表示用 */
     .main-title .highlight {
-      color: #FFC107;
+      color: #FFC107; /* イエローアクセント */
     }
 
-    /* サブタイトルや説明文 */
+    /* 説明文 */
     .sub-title {
       font-size: 1.1rem;
       font-weight: 400;
       max-width: 700px;
       margin: 0 auto 40px auto;
-      color: #4C5B66; /* 少し薄めのグレー */
+      color: #4C5B66; /* やや薄めのグレー */
       line-height: 1.6;
     }
 
@@ -76,7 +76,10 @@
       margin-bottom: 60px;
     }
 
-    /* リンクボタン（YouTube, スマホアプリ, Instagram） */
+    /*
+     * リンクボタン（YouTube, スマホアプリ, Instagram）
+     * ふんわり丸みを強め、影付き＆ホバー時に上昇
+     */
     .link-button {
       display: flex;
       align-items: center;
@@ -84,20 +87,20 @@
       text-decoration: none;
       background-color: #ffffff;
       color: #2B2E47;
-      padding: 15px 20px;
-      border-radius: 10px;
+      padding: 15px 25px;           /* 少し大きめにしてポップに */
+      border-radius: 30px;         /* 丸みを増やす */
       font-size: 1.2em;
       font-weight: 600;
       transition: box-shadow 0.2s ease, transform 0.2s ease;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* ふんわり影 */
     }
     .link-button i {
       margin-right: 10px;
       font-size: 1.4em;
     }
     .link-button:hover {
-      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      transform: translateY(-3px); /* 少しだけ浮く演出 */
     }
 
     /* フッター */
@@ -110,7 +113,7 @@
       margin-top: 40px;
     }
 
-    /* レスポンシブ対応 */
+    /* スマホ対応 */
     @media (max-width: 600px) {
       .main-title {
         font-size: 2rem;
@@ -120,6 +123,7 @@
       }
       .link-button {
         font-size: 1rem;
+        padding: 12px 20px;
       }
       .link-button i {
         font-size: 1.2em;
@@ -128,9 +132,11 @@
   </style>
 </head>
 <body>
+
   <div class="container">
-    <!-- タイトルと説明文 -->
+    <!-- タイトル -->
     <h1 class="main-title">Rumia<span class="highlight">Animation</span></h1>
+    <!-- 説明文 -->
     <p class="sub-title">
       ここではオリジナルアニメーションや様々なクリエイティブ作品を発信中！<br>
       新しい作品の情報をいち早くチェックしてね。
@@ -160,15 +166,13 @@
         <i class="fab fa-instagram"></i>Instagram
       </a>
     </div>
-
-    <!-- コンテンツを追加するときはここにセクションを増やす -->
-
   </div>
 
   <!-- フッター -->
   <footer>
     &copy; 2025 RumiaAnimation. All rights reserved.
   </footer>
+
 </body>
 </html>
 
