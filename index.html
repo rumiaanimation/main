@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>RumiaAnimation</title>
 
-  <!-- Google Fonts: Poppins -->
+  <!-- Google Fonts: Poppins (例として使用) -->
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
     rel="stylesheet"
   />
 
-  <!-- Font Awesome (Kit) -->
+  <!-- 自分用のFont Awesomeキット（アイコン使用のため） -->
   <script src="https://kit.fontawesome.com/282c30e639.js" crossorigin="anonymous"></script>
 
   <style>
@@ -22,45 +22,34 @@
       box-sizing: border-box;
     }
 
-    /* bodyの背景を、指定URLから繰り返し読み込み */
+    /* bodyは省略。背景等は既存のままでOK。 */
     body {
       font-family: 'Poppins', sans-serif;
-      background:
-        #fff
-        url("https://rumiaanimation.github.io/main/HPhaikei.png")
-        repeat
-        center center;
-      background-size: 200px 200px; 
       color: #2B2E47;
-      overflow-x: hidden;
+      background: #fff; /* 必要に応じてパターン画像やグラデーションを設定 */
     }
 
+    /* コンテナ・タイトルなども既存のままでOK */
     .container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 60px 20px;
       text-align: center;
     }
-
     .main-title {
       font-size: 3rem;
       font-weight: 700;
       margin-bottom: 20px;
-      line-height: 1.2;
     }
-    .main-title .highlight {
-      color: #FFC107;
-    }
-
     .sub-title {
       font-size: 1.1rem;
-      font-weight: 400;
       max-width: 700px;
       margin: 0 auto 40px auto;
       color: #4C5B66;
       line-height: 1.6;
     }
 
+    /* リンクボタンをまとめるラッパ */
     .links-container {
       display: flex;
       flex-direction: column;
@@ -70,29 +59,42 @@
       margin-bottom: 60px;
     }
 
+    /* ================================
+       ★ ボタン（Font Awesome公式風）★
+       ================================ */
     .link-button {
-      display: flex;
+      /* 表示方法 */
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      text-decoration: none;
-      background-color: #ffffff;
-      color: #2B2E47;
-      padding: 15px 25px;
-      border-radius: 30px;
-      font-size: 1.2em;
+
+      /* 文字設定・余白など */
       font-weight: 600;
-      transition: box-shadow 0.2s ease, transform 0.2s ease;
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      font-size: 1.2em;
+      text-decoration: none;
+      padding: 14px 24px;
+      border-radius: 8px;        /* 角をやや丸く */
+      border: 2px solid #2B2E47; /* 公式風のアウトライン (ここは濃ネイビー系) */
+      color: #2B2E47;           /* 文字色も同じネイビー系 */
+
+      /* 背景色は白 */
+      background-color: #fff;
+
+      /* transitionでホバー時の変化を滑らかに */
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
+    /* アイコンの右マージン */
     .link-button i {
-      margin-right: 10px;
-      font-size: 1.4em;
+      margin-right: 8px;
+      font-size: 1.2em;
     }
+    /* ホバー時: 背景色と文字色を変える */
     .link-button:hover {
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-      transform: translateY(-3px);
+      background-color: #2B2E47; /* アウトライン色と同じ色を背景に */
+      color: #fff;              /* 白文字に反転 */
     }
 
+    /* フッターは既存 */
     footer {
       text-align: center;
       padding: 20px;
@@ -102,6 +104,7 @@
       margin-top: 40px;
     }
 
+    /* レスポンシブ対応（必要に応じて） */
     @media (max-width: 600px) {
       .main-title {
         font-size: 2rem;
@@ -114,19 +117,22 @@
         padding: 12px 20px;
       }
       .link-button i {
-        font-size: 1.2em;
+        font-size: 1em;
       }
     }
   </style>
 </head>
 <body>
+
   <div class="container">
-    <h1 class="main-title">Rumia<span class="highlight">Animation</span></h1>
+
+    <!-- タイトル(例) -->
+    <h1 class="main-title">RumiaAnimation</h1>
     <p class="sub-title">
-     ルミアアニメーションへようこそ<br>
-    　iOS向けスマホアプリをリリースしました！ぜひご利用ください♪
+      ここではオリジナルアニメーションやクリエイティブ作品を発信中！
     </p>
 
+    <!-- リンクボタン一覧 -->
     <div class="links-container">
       <a
         href="https://www.youtube.com/channel/UCK_cKJh2CTMVEh9_dgpy1cg"
@@ -150,13 +156,12 @@
         <i class="fab fa-instagram"></i>Instagram
       </a>
     </div>
+
   </div>
 
   <footer>
     &copy; 2025 RumiaAnimation. All rights reserved.
   </footer>
+
 </body>
 </html>
-
-
-
