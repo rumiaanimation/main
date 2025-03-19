@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>RumiaAnimation</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
     body {
       margin: 0;
@@ -37,7 +38,9 @@
       margin-bottom: 30px;
     }
     .link-button {
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-decoration: none;
       color: #5A3E2B;
       background-color: #FFBDB0;
@@ -46,6 +49,10 @@
       transition: background-color 0.3s ease, transform 0.2s ease;
       font-size: 1.2em;
       box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    .link-button i {
+      margin-right: 10px;
+      font-size: 1.5em;
     }
     .link-button:hover {
       background-color: #E89A58;
@@ -67,6 +74,9 @@
         font-size: 1em;
         padding: 12px 20px;
       }
+      .link-button i {
+        font-size: 1.2em;
+      }
     }
   </style>
 </head>
@@ -76,9 +86,15 @@
       <h1>RumiaAnimation</h1>
     </header>
     <div class="links">
-      <a href="https://www.youtube.com/channel/UCK_cKJh2CTMVEh9_dgpy1cg" target="_blank" class="link-button">YouTube</a>
-      <a href="https://apps.apple.com/jp/app/%E3%83%AB%E3%83%9F%E3%82%A2%E3%83%99%E3%83%93%E3%83%BC%E3%82%B9%E3%83%AA%E3%83%BC%E3%83%97/id6742806839" target="_blank" class="link-button">スマホアプリ</a>
-      <a href="https://www.instagram.com/rumia_animation/" target="_blank" class="link-button">Instagram</a>
+      <a href="https://www.youtube.com/channel/UCK_cKJh2CTMVEh9_dgpy1cg" target="_blank" class="link-button">
+        <i class="fab fa-youtube"></i>YouTube
+      </a>
+      <a href="https://apps.apple.com/jp/app/%E3%83%AB%E3%83%9F%E3%82%A2%E3%83%99%E3%83%93%E3%83%BC%E3%82%B9%E3%83%AA%E3%83%BC%E3%83%97/id6742806839" target="_blank" class="link-button">
+        <i class="fas fa-mobile-alt"></i>スマホアプリ
+      </a>
+      <a href="https://www.instagram.com/rumia_animation/" target="_blank" class="link-button">
+        <i class="fab fa-instagram"></i>Instagram
+      </a>
     </div>
     <footer>
       &copy; 2025 RumiaAnimation. All rights reserved.
