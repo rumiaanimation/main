@@ -22,20 +22,22 @@
       box-sizing: border-box;
     }
 
-    /* ★ 背景画像を設定 (repeat でタイル状に並べる) */
+    /* body: 背景にタイル状の画像を設定 */
     body {
       font-family: 'Poppins', sans-serif;
+      color: #2B2E47;
       background:
-        /* 白背景 + 独自画像 */
+        /* ベース色は白 */
         #fff
+        /* 背景画像をタイル状に繰り返し */
         url("https://rumiaanimation.github.io/main/HPhaikei.png")
         repeat
         center center;
       background-size: 200px 200px; 
-      color: #2B2E47;
-      overflow-x: hidden;
+      overflow-x: hidden; /* 横スクロール防止 */
     }
 
+    /* コンテナ */
     .container {
       max-width: 1200px;
       margin: 0 auto;
@@ -43,12 +45,20 @@
       text-align: center;
     }
 
+    /* メインタイトル */
     .main-title {
       font-size: 3rem;
       font-weight: 700;
       margin-bottom: 20px;
+      line-height: 1.2;
     }
 
+    /* Rumiaを強調表示するクラス */
+    .highlight {
+      color: #FFC107; /* Font Awesome公式の “website.” と同じようなゴールド系 */
+    }
+
+    /* サブタイトル / 説明文 */
     .sub-title {
       font-size: 1.1rem;
       max-width: 700px;
@@ -57,6 +67,7 @@
       line-height: 1.6;
     }
 
+    /* リンクボタンラッパ */
     .links-container {
       display: flex;
       flex-direction: column;
@@ -66,7 +77,7 @@
       margin-bottom: 60px;
     }
 
-    /* ========= Font Awesome公式風のボタンデザイン ========= */
+    /* リンクボタン（Font Awesome公式風） */
     .link-button {
       display: inline-flex;
       align-items: center;
@@ -75,24 +86,23 @@
       font-size: 1.2em;
       text-decoration: none;
       padding: 14px 24px;
-      border-radius: 8px;        
-      border: 2px solid #2B2E47; 
-      color: #2B2E47;           
-      background-color: #fff;
+      border-radius: 8px;         /* 角の丸み */
+      border: 2px solid #2B2E47; /* 太めのアウトライン */
+      color: #2B2E47;            /* 文字色はネイビー系 */
+      background-color: #fff;    /* 白地ボタン */
       transition: background-color 0.3s ease, color 0.3s ease;
     }
-
     .link-button i {
       margin-right: 8px;
       font-size: 1.2em;
     }
-
-    /* ホバー時に塗りつぶし＆白文字に変化 */
+    /* ホバー時: 背景をネイビーに塗りつぶし、文字を白に反転 */
     .link-button:hover {
       background-color: #2B2E47;
       color: #fff;
     }
 
+    /* フッター */
     footer {
       text-align: center;
       padding: 20px;
@@ -102,6 +112,7 @@
       margin-top: 40px;
     }
 
+    /* レスポンシブ対応 */
     @media (max-width: 600px) {
       .main-title {
         font-size: 2rem;
@@ -122,11 +133,17 @@
 <body>
 
   <div class="container">
-     <h1 class="main-title"><span class="highlight">Rumia</span>Animation</h1>
+    <!-- タイトル -->
+    <h1 class="main-title">
+      <span class="highlight">Rumia</span>Animation
+    </h1>
+    <!-- サブタイトル -->
     <p class="sub-title">
-      ここではオリジナルアニメーションやクリエイティブ作品を発信中！
+      ここではオリジナルアニメーションや様々なクリエイティブ作品を発信中！<br>
+      新しい作品の情報をいち早くチェックしてね。
     </p>
 
+    <!-- リンクボタン一覧 -->
     <div class="links-container">
       <a
         href="https://www.youtube.com/channel/UCK_cKJh2CTMVEh9_dgpy1cg"
@@ -150,12 +167,13 @@
         <i class="fab fa-instagram"></i>Instagram
       </a>
     </div>
-
   </div>
 
+  <!-- フッター -->
   <footer>
     &copy; 2025 RumiaAnimation. All rights reserved.
   </footer>
 
 </body>
 </html>
+
