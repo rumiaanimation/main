@@ -3,40 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> RumiaAnimation</title>
-  <!-- 柔らかい印象のQuicksandフォントを利用 -->
+  <title>RumiaAnimation</title>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* ページ全体の背景 */
     body {
       margin: 0;
       font-family: 'Quicksand', sans-serif;
-      background-color: #59C5C7; /* 紺色 */
-      color: #8F6B53;
+      background-color: #59C5C7;
+      color: #5A3E2B;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
     }
-    /* コンテナを落ち着いたダークブルーに変更 */
     .container {
       max-width: 800px;
       width: 90%;
       padding: 30px;
       text-align: center;
-      background: #C2F6FF; /* ダークブルー */
+      background: #C2F6FF;
       border-radius: 15px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-    }
-    header {
-      margin-bottom: 30px;
     }
     h1 {
       font-size: 2.5em;
       margin: 0;
-      color: #8F6B53; /* ライトピンクで優しい印象 */
+      color: #5A3E2B;
     }
-    /* リンクボタンのスタイル */
     .links {
       display: flex;
       flex-direction: column;
@@ -46,27 +39,41 @@
     .link-button {
       display: block;
       text-decoration: none;
-      color: #8F6B53;
-      background-color: #FFBDB0; /* 落ち着いたブルー */
-      padding: 15px;
+      color: #5A3E2B;
+      background-color: #FFBDB0;
+      padding: 15px 25px;
       border-radius: 50px;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease, transform 0.2s ease;
       font-size: 1.2em;
       box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     }
     .link-button:hover {
-      background-color: #F5BA6E;
+      background-color: #E89A58;
+      transform: scale(1.05);
     }
     footer {
       font-size: 0.9em;
-      color: #8F6B53;
+      color: #5A3E2B;
+    }
+    @media (max-width: 600px) {
+      .container {
+        width: 95%;
+        padding: 20px;
+      }
+      h1 {
+        font-size: 2em;
+      }
+      .link-button {
+        font-size: 1em;
+        padding: 12px 20px;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <h1> RumiaAnimation</h1>
+      <h1>RumiaAnimation</h1>
     </header>
     <div class="links">
       <a href="https://www.youtube.com/channel/UCK_cKJh2CTMVEh9_dgpy1cg" target="_blank" class="link-button">YouTube</a>
