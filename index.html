@@ -1,186 +1,115 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>RumiaAnimation</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ころころ動く小さなキャラクターと、やさしい音楽。ルミアアニメーションの動画・音楽・保護者向けアプリをご紹介します。">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'none'; connect-src 'none'; frame-src 'none'; media-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>ルミアアニメーション｜小さな世界と、やさしい音。</title>
+  <link rel="canonical" href="https://rumiaanimation.github.io/main/">
+  <link rel="icon" href="app-icon.jpg">
+  <link rel="stylesheet" href="style.css">
 
-  <!-- Google Fonts: Poppins -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
-    rel="stylesheet"
-  />
-
-  <!-- 自分用のFont Awesomeキット -->
-  <script src="https://kit.fontawesome.com/282c30e639.js" crossorigin="anonymous"></script>
-
-  <style>
-    /* リセット */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    /* body: 背景にタイル状の画像を設定 */
-    body {
-      font-family: 'Poppins', sans-serif;
-      color: #2B2E47;
-      background:
-        /* ベース色は白 */
-        #fff
-        /* 背景画像をタイル状に繰り返し */
-        url("https://rumiaanimation.github.io/main/HPhaikei.png")
-        repeat
-        center center;
-      background-size: 200px 200px; 
-      overflow-x: hidden; /* 横スクロール防止 */
-    }
-
-    /* コンテナ */
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    /* メインタイトル */
-    .main-title {
-      font-size: 3rem;
-      font-weight: 700;
-      margin-bottom: 20px;
-      line-height: 1.2;
-    }
-
-    /* Rumiaを強調表示するクラス */
-    .highlight {
-      color: #FFC107; /* Font Awesome公式の “website.” と同じようなゴールド系 */
-    }
-
-    /* サブタイトル / 説明文 */
-    .sub-title {
-      font-size: 1.1rem;
-      max-width: 700px;
-      margin: 0 auto 40px auto;
-      color: #4C5B66;
-      line-height: 1.6;
-    }
-
-    /* リンクボタンラッパ */
-    .links-container {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      max-width: 400px;
-      margin: 0 auto;
-      margin-bottom: 60px;
-    }
-
-    /* リンクボタン（Font Awesome公式風） */
-    .link-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 600;
-      font-size: 1.2em;
-      text-decoration: none;
-      padding: 14px 24px;
-      border-radius: 8px;         /* 角の丸み */
-      border: 2px solid #2B2E47; /* 太めのアウトライン */
-      color: #2B2E47;            /* 文字色はネイビー系 */
-      background-color: #fff;    /* 白地ボタン */
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-    .link-button i {
-      margin-right: 8px;
-      font-size: 1.2em;
-    }
-    /* ホバー時: 背景をネイビーに塗りつぶし、文字を白に反転 */
-    .link-button:hover {
-      background-color: #2B2E47;
-      color: #fff;
-    }
-
-    /* フッター */
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #4C5B66;
-      font-size: 0.9rem;
-      border-top: 1px solid #e0e0e0;
-      margin-top: 40px;
-    }
-
-    /* レスポンシブ対応 */
-    @media (max-width: 600px) {
-      .main-title {
-        font-size: 2rem;
-      }
-      .sub-title {
-        font-size: 1rem;
-      }
-      .link-button {
-        font-size: 1rem;
-        padding: 12px 20px;
-      }
-      .link-button i {
-        font-size: 1em;
-      }
-    }
-  </style>
 </head>
 <body>
-
-  <div class="container">
-    <!-- タイトル -->
-    <h1 class="main-title">
-      <span class="highlight">Rumia</span>Animation
-    </h1>
-    <!-- サブタイトル -->
-    <p class="sub-title">
-      ルミアアニメーションへようこそ！<br>
-      スマホアプリをリリースしました！ぜひご利用ください♪
-    </p>
-
-    <!-- リンクボタン一覧 -->
-    <div class="links-container">
-      <a
-        href="https://www.youtube.com/channel/UCK_cKJh2CTMVEh9_dgpy1cg"
-        target="_blank"
-        class="link-button"
-      >
-        <i class="fab fa-youtube"></i>YouTube
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="ルミアアニメーション トップへ">
+        <img src="channel-logo.jpg" alt="" width="52" height="52">
+        <span><strong>Rumia Animation</strong><small>ルミアアニメーション</small></span>
       </a>
-      <a
-        href="https://apps.apple.com/jp/app/%E3%83%AB%E3%83%9F%E3%82%A2%E3%83%99%E3%83%93%E3%83%BC%E3%82%B9%E3%83%AA%E3%83%BC%E3%83%97/id6742806839"
-        target="_blank"
-        class="link-button"
-      >
-        <i class="fas fa-mobile-alt"></i>スマホアプリ
-      </a>
-      <a
-        href="https://www.instagram.com/rumiaanimation/"
-        target="_blank"
-        class="link-button"
-      >
-        <i class="fab fa-instagram"></i>Instagram
-      </a>
-      <!-- お問い合わせリンク追加 -->
-      <a
-        href="mailto:rumia.animation@gmail.com"
-        class="link-button"
-      >
-        <i class="fas fa-envelope"></i>お問い合わせ
-      </a>
+      <nav class="main-nav" aria-label="メインメニュー">
+        <a href="#works">動画</a>
+        <a href="#app">アプリ</a>
+        <a href="#music">音楽</a>
+      </nav>
     </div>
-  </div>
+  </header>
 
-  <!-- フッター -->
-  <footer>
-    &copy; 2025 RumiaAnimation. All rights reserved.
+  <main id="main">
+    <section class="hero shell" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="tiny-star" aria-hidden="true">✦</span> 親子の時間に、ルミア。</p>
+        <h1 id="hero-title">小さな世界と、<br>やさしい音。</h1>
+        <p class="hero-description">ころころ動く、小さな仲間たち。<br>アニメーションと音楽で、<br class="mobile-break">親子のひとときに彩りを。</p>
+        <a class="button button-dark" href="#works">作品を見てみる <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-scene">
+        <span class="scene-star star-one" aria-hidden="true">✦</span>
+        <span class="scene-star star-two" aria-hidden="true">✧</span>
+        <div class="scene-label" aria-hidden="true">WELCOME TO OUR LITTLE WORLD</div>
+        <a class="scene-card" href="https://youtu.be/Tu9-avYZJ90" target="_blank" rel="noopener noreferrer" aria-label="ころころアニメとオルゴールをYouTubeで見る（新しいタブ）">
+          <img class="hero-photo" src="Tu9-avYZJ90-maxres1.jpg" alt="星空の下、坂道をころころ進む、猫やだるまの丸いキャラクター" width="1280" height="720" fetchpriority="high">
+          <span class="scene-caption"><span class="play-circle" aria-hidden="true">▶</span><span>ころころアニメとオルゴール<small>YouTubeで見る</small></span><span class="external-arrow" aria-hidden="true">↗</span></span>
+        </a>
+      </div>
+    </section>
+
+    <nav class="ways shell" aria-label="ルミアの楽しみ方">
+      <a href="#works"><span class="way-number">01</span><span><small>小さな世界を楽しむ</small><strong>動画をみる</strong></span><span aria-hidden="true">↘</span></a>
+      <a href="#app"><span class="way-number">02</span><span><small>毎日の音と記録に</small><strong>アプリを使う</strong></span><span aria-hidden="true">↘</span></a>
+      <a href="#music"><span class="way-number">03</span><span><small>音楽だけで楽しむ</small><strong>音楽を聴く</strong></span><span aria-hidden="true">↘</span></a>
+    </nav>
+
+    <section class="works shell section-space" id="works" aria-labelledby="works-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">01 / ANIMATION</p><h2 id="works-title">ルミアの世界を、<br class="mobile-break">のぞいてみよう。</h2></div>
+        <p>手づくりのような、ぬくもりのある世界。<br>気になる作品から、ゆっくりどうぞ。</p>
+      </div>
+      <div class="works-grid">
+        <a class="work-card" href="https://youtu.be/Tu9-avYZJ90" target="_blank" rel="noopener noreferrer">
+          <div class="work-image"><img src="Tu9-avYZJ90-maxres1.jpg" alt="猫やだるまの仲間たちが星空の坂道を進むアニメーション" width="1280" height="720" loading="lazy"><span class="work-play" aria-hidden="true">▶</span></div>
+          <div class="work-body"><p class="tags">コロコロアニメ <span>·</span> オルゴール</p><h3>ころころ進む、小さな仲間たち。</h3><p>まあるい仲間たちと、オルゴールの音。</p><span class="text-link">YouTubeで見る <span aria-hidden="true">↗</span><span class="sr-only">（新しいタブ）</span></span></div>
+        </a>
+        <a class="work-card" href="https://youtu.be/6e4p2wk-7D8" target="_blank" rel="noopener noreferrer">
+          <div class="work-image"><img src="6e4p2wk-7D8-maxres1.jpg" alt="月とクマ、小さな動物たちが星空の中に浮かぶアニメーション" width="1280" height="720" loading="lazy"><span class="work-play" aria-hidden="true">▶</span></div>
+          <div class="work-body"><p class="tags">きらきら星 <span>·</span> ホワイトノイズ</p><h3>きらきら星と、夜の小さな世界。</h3><p>星空をめぐる仲間たちと、やさしいメロディー。</p><span class="text-link">YouTubeで見る <span aria-hidden="true">↗</span><span class="sr-only">（新しいタブ）</span></span></div>
+        </a>
+      </div>
+      <a class="button button-outline channel-link" href="https://www.youtube.com/@rumiaanimation" target="_blank" rel="noopener noreferrer">YouTubeでほかの作品も見る <span aria-hidden="true">↗</span><span class="sr-only">（新しいタブ）</span></a>
+    </section>
+
+    <section class="app-section" id="app" aria-labelledby="app-title">
+      <div class="app-inner shell">
+        <div class="app-copy">
+          <p class="eyebrow">02 / APP FOR PARENTS</p>
+          <div class="app-brand"><img src="app-icon.jpg" alt="ルミアスリープのアプリアイコン" width="64" height="64" loading="lazy"><span>保護者のためのアプリ<strong>ルミアスリープ</strong></span></div>
+          <h2 id="app-title">いつもの音も、<br>ねんねの記録も。</h2>
+          <p>好きな音を組み合わせたり、<br>寝た・起きた時間を残したり。<br>ご家庭のペースで、必要な機能を。</p>
+          <ul class="feature-list">
+            <li><span aria-hidden="true">＋</span>音をミックスして、セットを保存</li>
+            <li><span aria-hidden="true">◷</span>タイマーで再生時間を設定</li>
+            <li><span aria-hidden="true">✓</span>寝た・起きたを記録、あとから編集</li>
+            <li><span aria-hidden="true">♪</span>声や子守歌を録音</li>
+          </ul>
+          <a class="button button-yellow" href="https://apps.apple.com/jp/app/id6742806839" target="_blank" rel="noopener noreferrer">App Storeで詳しく見る <span aria-hidden="true">↗</span><span class="sr-only">（新しいタブ）</span></a>
+          <div class="app-price"><p>無料で利用できます（広告あり・アプリ内課金あり）。</p><p>プレミアム：月額200円。広告非表示、30日・90日のグラフなど。</p><p>最新の料金・対応端末・機能はApp Storeでご確認ください。</p></div>
+        </div>
+        <figure class="app-screens">
+          <div class="screen-backdrop" aria-hidden="true"><span>☾</span><span>✦</span></div>
+          <img class="phone phone-one" src="app-screen-1.jpg" alt="App Store掲載画像：やさしい音の再生、音量、タイマー、寝た時間の記録画面" width="221" height="480" loading="lazy">
+          <img class="phone phone-two" src="app-screen-3.jpg" alt="App Store掲載画像：毎日のねんね時間を振り返る、7日・30日・90日のグラフ画面" width="221" height="480" loading="lazy">
+          <figcaption>App Storeに掲載中の画面</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="music-section shell section-space" id="music" aria-labelledby="music-title">
+      <div class="music-art"><div class="record-disc" aria-hidden="true"></div><img src="music-release.png" alt="ルミアアニメーションの音楽作品のジャケット" width="500" height="500" loading="lazy"><span class="art-note" aria-hidden="true">A little music for your day.</span></div>
+      <div class="music-copy"><p class="eyebrow">03 / MUSIC</p><h2 id="music-title">音楽だけで、<br>楽しむルミア。</h2><p>オルゴールのメロディーや環境音を、<br>いつもの音楽サービスで。<br>お好みの配信先を選べます。</p><p class="service-names">Apple Music <span>·</span> Spotify <span>ほか</span></p><a class="button button-dark" href="https://www.tunecore.co.jp/artists?id=1063439" target="_blank" rel="noopener noreferrer">音楽の配信先を選ぶ <span aria-hidden="true">↗</span><span class="sr-only">（新しいタブ）</span></a></div>
+    </section>
+
+    <section class="about-strip" aria-label="ルミアについて"><div class="shell"><span aria-hidden="true">✦</span><p>ころころ、きらきら。<br>小さな世界を、親子の時間に。</p><span aria-hidden="true">✧</span></div></section>
+  </main>
+
+  <footer class="site-footer shell">
+    <div class="footer-top"><a class="brand" href="#top" aria-label="ルミアアニメーション トップへ"><img src="channel-logo.jpg" alt="" width="52" height="52" loading="lazy"><span><strong>Rumia Animation</strong><small>ルミアアニメーション</small></span></a><div class="footer-links"><a href="https://www.instagram.com/rumiaanimation/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span><span class="sr-only">（新しいタブ）</span></a><a href="mailto:rumia.animation@gmail.com">メールでお問い合わせ <span aria-hidden="true">↗</span></a></div></div>
+    <div class="footer-policy-links">
+      <a href="terms.html">アプリの利用規約・プライバシーポリシー <span aria-hidden="true">↗</span></a>
+      <a href="https://sites.google.com/view/rumiaanimation" target="_blank" rel="noopener noreferrer">App Storeのプライバシー案内 <span aria-hidden="true">↗</span><span class="sr-only">（新しいタブ）</span></a>
+    </div>
+    <div class="footer-bottom"><small>© Rumia Animation</small><a href="#top">ページの先頭へ ↑</a></div>
   </footer>
-
 </body>
 </html>
-
