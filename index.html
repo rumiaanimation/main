@@ -4,12 +4,31 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="ころころ動く小さなキャラクターと、やさしい音楽。ルミアアニメーションの動画・音楽・保護者向けアプリをご紹介します。">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'none'; connect-src 'none'; frame-src 'none'; media-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://www.google-analytics.com https://region1.google-analytics.com; style-src 'self' 'sha256-wOwxecUKrYVxNTP7ZA2mBCTEVazq03FRulmzpc5NTNI='; script-src 'sha256-iwcySm5aYJoQayjZnk+MYdlrvzJMV7Uthreu4pyrMXw=' https://www.googletagmanager.com/gtag/js; script-src-attr 'none'; connect-src https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com; frame-src 'none'; media-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="strict-origin">
   <title>ルミアアニメーション｜小さな世界と、やさしい音。</title>
   <link rel="canonical" href="https://rumiaanimation.github.io/main/">
   <link rel="icon" href="app-icon.jpg">
   <link rel="stylesheet" href="style.css">
 
+<style>
+[hidden]{display:none!important}
+.analytics-choice{margin-block:24px;padding:22px 26px;border:1px solid var(--line);border-radius:18px;background:#fffef9}
+.analytics-choice h2{font-size:18px;line-height:1.7;margin-bottom:8px}
+.analytics-choice p,.web-analytics-info p{font-size:14px;line-height:1.9;color:var(--muted)}
+.analytics-choice-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}
+.analytics-choice button,.analytics-settings{font:inherit;cursor:pointer;color:var(--green);border:1px solid var(--green);border-radius:12px;background:transparent;min-height:48px;padding:10px 22px;font-weight:700;font-size:13px}
+.analytics-choice button:hover,.analytics-settings:hover{background:#e9ede4}
+.analytics-choice button:focus-visible,.analytics-settings:focus-visible{outline:3px solid #a75c23;outline-offset:4px}
+.analytics-choice a,.web-analytics-info a{text-decoration:underline;text-underline-offset:4px}
+.analytics-choice small{display:block;font-size:12px;color:var(--muted);margin-top:10px;line-height:1.8}
+.web-analytics-info{margin-top:18px;padding-block:8px;border-bottom:1px solid var(--line)}
+.web-analytics-info summary{cursor:pointer;min-height:48px;padding-block:12px;font-size:13px}
+.web-analytics-info p{margin-block:10px}
+.analytics-settings{margin-block:8px 16px;font-weight:400}
+.analytics-status{font-size:12px;color:var(--muted);margin-bottom:12px}
+@media(max-width:700px){.analytics-choice{padding:18px;margin-block:18px}.analytics-choice h2{font-size:16px}.analytics-choice-actions button{flex:1;padding-inline:12px}}
+</style>
 </head>
 <body>
   <a class="skip-link" href="#main">本文へ移動</a>
@@ -45,6 +64,15 @@
         </a>
       </div>
     </section>
+
+
+  <section class="analytics-choice shell" id="analytics-choice" aria-labelledby="analytics-choice-title" hidden>
+    <h2 id="analytics-choice-title" tabindex="-1">サイトの利用状況を計測してよいですか？</h2>
+    <p>許可すると、閲覧・流入元・動画／アプリ／音楽のリンク選択をGoogle Analyticsへ送信します。Cookieと端末・ブラウザー情報を使い、サイト改善に役立てます。</p>
+    <p>許可しない場合も、すべての作品やリンクを利用できます。<a href="#web-analytics-info" id="analytics-more">計測について詳しく見る</a></p>
+    <div class="analytics-choice-actions"><button type="button" id="analytics-allow">許可する</button><button type="button" id="analytics-deny">許可しない</button></div>
+    <small>選ぶまではGoogleタグを読み込みません。選択はあとから変更できます。</small>
+  </section>
 
     <nav class="ways shell" aria-label="ルミアの楽しみ方">
       <a href="#works"><span class="way-number">01</span><span><small>小さな世界を楽しむ</small><strong>動画をみる</strong></span><span aria-hidden="true">↘</span></a>
@@ -109,7 +137,181 @@
       <a href="terms.html">アプリの利用規約・プライバシーポリシー <span aria-hidden="true">↗</span></a>
       <a href="https://sites.google.com/view/rumiaanimation" target="_blank" rel="noopener noreferrer">App Storeのプライバシー案内 <span aria-hidden="true">↗</span><span class="sr-only">（新しいタブ）</span></a>
     </div>
+
+    <details class="web-analytics-info" id="web-analytics-info">
+      <summary>このWebサイトのアクセス計測について</summary>
+      <p>ルミアアニメーションは、公式サイトの訪問数・流入元と、YouTube・App Store・音楽の外部リンク選択を把握し、サイト改善に役立てるため、Google Analyticsを利用します。アプリのインストールや動画の視聴完了を測るものではありません。</p>
+      <p>許可した場合は、閲覧ページ、流入元のドメイン、外部リンクの選択、Cookieによるブラウザー識別子、端末・ブラウザー情報などがGoogleへ送信され、Googleの仕組みで処理されます。個人名・メールアドレス・アプリ内の睡眠記録・子どもの記録・録音データを送信する項目は設けていません。広告パーソナライズやUser-IDは利用しません。</p>
+      <p>許可前と拒否時はGoogleタグを読み込まず、アクセス計測の送信を行いません。許可を取り消すとページを再読み込みして計測を停止し、このサイト用のAnalytics Cookieを削除します。取り消しは、すでに送信したデータの削除ではありません。</p>
+      <p>選択はこのブラウザーに最大90日保存します。Analytics Cookieも最大90日です。ブラウザーの保存データを消した場合は、再度選択が必要です。下のボタンから、いつでも選択を変更できます。</p>
+      <p><a href="https://support.google.com/analytics/answer/6004245?hl=ja" target="_blank" rel="noopener noreferrer">Google Analyticsのデータ保護について<span class="sr-only">（新しいタブ）</span></a> ／ <a href="https://policies.google.com/technologies/partner-sites?hl=ja" target="_blank" rel="noopener noreferrer">Googleによるデータの利用について<span class="sr-only">（新しいタブ）</span></a></p>
+    </details>
+    <button type="button" class="analytics-settings" id="analytics-settings" aria-controls="analytics-choice" aria-expanded="false" hidden>アクセス計測の選択を変更</button>
+    <p class="analytics-status" id="analytics-status" role="status" aria-live="polite"></p>
+    <noscript><p class="analytics-status">JavaScriptが無効のため、アクセス計測は行っていません。</p></noscript>
+
     <div class="footer-bottom"><small>© Rumia Animation</small><a href="#top">ページの先頭へ ↑</a></div>
   </footer>
+<script>
+(() => {
+  'use strict';
+  const id = 'G-VT5SV810TS';
+  const key = 'rumia-web-analytics-consent-v1';
+  const lifetime = 90 * 24 * 60 * 60 * 1000;
+  const canonical = 'https://rumiaanimation.github.io/main/';
+  const panel = document.getElementById('analytics-choice');
+  const settings = document.getElementById('analytics-settings');
+  const status = document.getElementById('analytics-status');
+  let choice = null;
+  let started = false;
+  let returnFocus = null;
+  window['ga-disable-' + id] = true;
+
+  function readChoice() {
+    try {
+      const saved = JSON.parse(localStorage.getItem(key));
+      if (saved && ['granted', 'denied'].includes(saved.choice) &&
+          Number.isFinite(saved.expires) && saved.expires > Date.now()) return saved.choice;
+    } catch (_) { /* Unavailable or malformed storage never authorizes measurement. */ }
+    return null;
+  }
+  function saveChoice(value) {
+    try {
+      localStorage.removeItem(key);
+      localStorage.setItem(key, JSON.stringify({choice:value, expires:Date.now() + lifetime}));
+      return true;
+    } catch (_) { return false; }
+  }
+  function updateUi() {
+    status.textContent = choice === 'granted' ? 'アクセス計測：許可しています。' :
+      choice === 'denied' ? 'アクセス計測：許可していません。' : 'アクセス計測：まだ選択されていません。';
+    settings.hidden = false;
+    panel.hidden = choice !== null;
+    settings.setAttribute('aria-expanded', String(!panel.hidden));
+  }
+  function safeReferrer() {
+    try {
+      const url = new URL(document.referrer);
+      return ['https:', 'http:'].includes(url.protocol) && !url.username && !url.password ? url.origin + '/' : '';
+    } catch (_) { return ''; }
+  }
+  function clearAnalyticsCookies() {
+    for (const part of document.cookie.split(';')) {
+      const name = part.trim().split('=')[0];
+      if (!name.startsWith('rumia_web')) continue;
+      for (const path of ['/main/', '/']) {
+        for (const domain of ['', '; Domain=' + location.hostname]) {
+          document.cookie = name + '=; Max-Age=0; Path=' + path + domain + '; SameSite=Lax';
+        }
+      }
+    }
+  }
+  function stopAndReload() {
+    window['ga-disable-' + id] = true;
+    if (window.dataLayer) window.dataLayer.length = 0;
+    window.gtag = () => {};
+    document.getElementById('rumia-google-tag')?.remove();
+    clearAnalyticsCookies();
+    // A clean document removes the already executed third-party code.
+    location.reload();
+  }
+  function startMeasurement() {
+    if (started || choice !== 'granted') return;
+    started = true;
+    const referrer = safeReferrer();
+    // No arbitrary query/hash (including UTM free text or ad IDs) reaches the tag.
+    const allowedHashes = ['#top', '#main', '#works', '#app', '#music', '#web-analytics-info'];
+    try {
+      history.replaceState(null, '', location.pathname + (allowedHashes.includes(location.hash) ? location.hash : ''));
+    } catch (_) { started = false; status.textContent = 'URLを安全に扱えないため、アクセス計測を開始していません。'; return; }
+    window['ga-disable-' + id] = false;
+    window.dataLayer = [];
+    window.gtag = function () {
+      if (choice === 'granted' && !window['ga-disable-' + id]) window.dataLayer.push(arguments);
+    };
+    gtag('consent', 'default', {
+      analytics_storage:'granted', ad_storage:'denied', ad_user_data:'denied', ad_personalization:'denied'
+    });
+    gtag('set', 'ads_data_redaction', true);
+    gtag('js', new Date());
+    gtag('config', id, {
+      send_page_view:false,
+      allow_google_signals:false,
+      allow_ad_personalization_signals:false,
+      cookie_prefix:'rumia_web',
+      cookie_domain:location.hostname,
+      cookie_path:'/main/',
+      cookie_expires:90 * 24 * 60 * 60,
+      cookie_update:false,
+      cookie_flags:'SameSite=Lax;Secure',
+      page_location:canonical,
+      page_referrer:referrer,
+      page_title:'ルミアアニメーション 公式サイト'
+    });
+    gtag('event', 'page_view', {send_to:id, page_location:canonical, page_referrer:referrer});
+    const tag = document.createElement('script');
+    tag.id = 'rumia-google-tag';
+    tag.async = true;
+    tag.referrerPolicy = 'no-referrer';
+    tag.src = 'https://www.googletagmanager.com/gtag/js?id=' + id;
+    tag.addEventListener('error', () => {
+      window['ga-disable-' + id] = true;
+      status.textContent = 'アクセス計測を読み込めませんでした。作品やリンクはそのまま利用できます。';
+    });
+    document.head.append(tag);
+  }
+  function choose(value) {
+    choice = value;
+    const saved = saveChoice(value);
+    if (value === 'denied') window['ga-disable-' + id] = true;
+    updateUi();
+    if (!saved) status.textContent += ' このブラウザーでは選択を保存できません。';
+    if (value === 'denied' && started) { stopAndReload(); return; }
+    if (value === 'granted') startMeasurement();
+    (returnFocus || document.querySelector('.hero-copy .button')).focus();
+    returnFocus = null;
+  }
+  document.getElementById('analytics-allow').addEventListener('click', () => choose('granted'));
+  document.getElementById('analytics-deny').addEventListener('click', () => choose('denied'));
+  settings.addEventListener('click', () => {
+    returnFocus = settings;
+    panel.hidden = false;
+    settings.setAttribute('aria-expanded', 'true');
+    document.getElementById('analytics-choice-title').focus();
+  });
+  document.getElementById('analytics-more').addEventListener('click', () => {
+    document.getElementById('web-analytics-info').open = true;
+  });
+  const links = new Map([
+    ['https://youtu.be/Tu9-avYZJ90', 'outbound_youtube'],
+    ['https://youtu.be/6e4p2wk-7D8', 'outbound_youtube'],
+    ['https://www.youtube.com/@rumiaanimation', 'outbound_youtube'],
+    ['https://apps.apple.com/jp/app/id6742806839', 'outbound_app_store'],
+    ['https://www.tunecore.co.jp/artists?id=1063439', 'outbound_music']
+  ]);
+  function trackLink(event) {
+    if (choice !== 'granted' || window['ga-disable-' + id] || event.defaultPrevented) return;
+    if (event.type === 'auxclick' && event.button !== 1) return;
+    const link = event.target.closest?.('a[href]');
+    if (!link) return;
+    const href = link.getAttribute('href');
+    const name = links.get(href);
+    if (name) gtag('event', name, {send_to:id, link_url:href, page_location:canonical, page_referrer:safeReferrer()});
+  }
+  // Custom events are the only outbound measurement. Disable enhanced measurement in GA before publishing.
+  document.addEventListener('click', trackLink);
+  document.addEventListener('auxclick', trackLink);
+  window.addEventListener('storage', event => {
+    if (event.key !== key && event.key !== null) return;
+    choice = readChoice();
+    if (choice !== 'granted' && started) { stopAndReload(); return; }
+    updateUi();
+    if (choice === 'granted') startMeasurement();
+  });
+  choice = readChoice();
+  updateUi();
+  if (choice === 'granted') startMeasurement();
+})();
+</script>
 </body>
 </html>
